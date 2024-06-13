@@ -3,11 +3,49 @@
 @tailwind utilities;
 
 *{
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    /* color: #FF035F; */
 }
+
+.resaltHome {
+    display: relative;
+    flex-direction: column;
+    width: fit-content;
+}
+  
+.resaltHome:after {
+    transition: width 0.5s ease;
+    content: "";
+    height: 0.3rem;
+    width: 10%;
+    background: #FF035F;
+    /* background: linear-gradient(90deg, rgba(255,0,191,1) 0%, rgba(138,0,255,1) 20%, rgba(255,0,42,1) 40%, rgba(255,208,0,1) 60%, rgba(255,0,96,1) 80%, rgba(255,0,158,1) 100%);; */
+}
+
+.resaltHeader {
+    display: relative;
+    flex-direction: column;
+    width: fit-content;
+}
+  
+.resaltHeader:after {
+    transition: width 0.5s ease;
+    content: "";
+    height: 0.15rem;
+    width: 0rem;
+    background: #FF035F;
+}
+.resaltHeader:hover::after,
+.resaltHeader:focus::after {
+    height: 0.15rem;
+    width: 100%;
+    background: #FF035F;
+    }
+.bg-gradiante{
+    background: linear-gradient(90deg, rgba(255,0,191,1) 0%, rgba(138,0,255,1) 20%, rgba(255,0,42,1) 40%, rgba(255,208,0,1) 60%, rgba(255,0,96,1) 80%, rgba(255,0,158,1) 100%);
+}    
 .texto-borde {
     -webkit-text-stroke: 2px black;
-    color: transparent; 
 }
 .ir-arriba{
     display:none;
@@ -20,3 +58,19 @@
     right:10px;
     z-index:2;
   }
+
+#objetivos{
+    background-image: url(src/img/contactanos.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+#Media{
+background-image: url(src/img/socialmedia.avif);
+}
+#contactanos{
+    background-image: url(src/img/homepage.jpeg);
+    background-size: contain;
+    background-position: center;
+    /* filter: brightness(90%); */
+}
